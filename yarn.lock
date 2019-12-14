@@ -1230,7 +1230,7 @@
   resolved "https://registry.yarnpkg.com/@microsoft/tsdoc/-/tsdoc-0.12.16.tgz#13869988581fddbdfdbcb92e26edc955fc6e00ca"
   integrity sha512-SX8JNEVy6U5+56aQnQB8A2XK+WSF//b0kBa6KqxE48pcccqVuIu1ePAR/EWd1cQB6zWv26QIY5uv/++qm+Z3Mw==
 
-"@monaco-editor/react@^2.1.1":
+"@monaco-editor/react@^2.4.0":
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/@monaco-editor/react/-/react-2.6.1.tgz#ae5854423ed09ed5387498a9e7f20e260fff5919"
   integrity sha512-nppV3QtwKh2c+J8Mdw/YZhHkdNTGmhwnkG824wSq3QiyOyfPKbThIWxkuRa2L8gcmWy0RLlIzJfQzLFeXyf1/w==
