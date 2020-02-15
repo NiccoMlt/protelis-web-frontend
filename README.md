@@ -1,10 +1,12 @@
 # Protelis on the Web - React frontend
 
+[![Build Status](https://travis-ci.com/NiccoMlt/Protelis-Web-Frontend.svg?token=gFNEyVkpY7xNqwmKzp7q&branch=master)](https://travis-ci.com/NiccoMlt/Protelis-Web-Frontend)
+[![codecov](https://codecov.io/gh/NiccoMlt/Protelis-Web-frontend/branch/master/graph/badge.svg)](https://codecov.io/gh/NiccoMlt/Protelis-Web-frontend)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-## Use cases
+Web frontend for [Protelis Web backend](https://github.com/NiccoMlt/Protelis-Web), deployed by default at https://protelis-web-frontend.now.sh.
 
-[![UML diagram](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/NiccoMlt/Protelis-Web/develop/docs/src/use-cases.puml)](https://github.com/NiccoMlt/Protelis-Web/blob/develop/docs/src/use-cases.puml)
+This is a Typescript project built with Yarn and `create-react-app` scripts and can be imported as a VS Code or WebStorm project.
 
 ## Code quality & CI
 
@@ -25,7 +27,12 @@ ESLint was chosen instead of TSLint because of the [deprecation announcement](ht
 
 ### Continuous integration
 
-The frontend project is built and checked by Travis CI on latest and LTS NodeJS versions of Windows, Ubuntu Bionic and MacOS.
+The project is built and checked by [Travis CI](https://travis-ci.com/) with latest LTS NodeJS version on Ubuntu Bionic.
+
+### Continuous deployment
+
+The project is deployed on [Zeit Now](https://zeit.co) automatically via GitHub Apps hooks.
+It can be manually deployed with `now` or `now --prod` commands.
 
 ## License and credits [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 

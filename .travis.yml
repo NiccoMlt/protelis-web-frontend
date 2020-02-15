@@ -1,15 +1,10 @@
 version: ~> 1.0
 
-os:
-  - osx
-  - windows
-  - linux
+os: linux
 dist: bionic
 
 language: node_js
-node_js:
-  - node
-  - lts/*
+node_js: lts/*
 
 cache:
   yarn: true

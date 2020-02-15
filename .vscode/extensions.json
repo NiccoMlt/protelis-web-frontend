@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "be5invis.toml",
     "dbaeumer.vscode-eslint",
     "EditorConfig.EditorConfig",
     "msjsdiag.debugger-for-chrome",
