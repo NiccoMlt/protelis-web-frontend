@@ -1,0 +1,23 @@
+version: ~> 1.0
+
+os:
+  - osx
+  - windows
+  - linux
+dist: bionic
+
+language: node_js
+node_js:
+  - node
+  - lts/*
+
+cache:
+  yarn: true
+
+script:
+  - yarn lint
+  - yarn build
+  - yarn test:ci
+
+after_script:
+  - yarn codecov:upload

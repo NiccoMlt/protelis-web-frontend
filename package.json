@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "@niccomlt/protelis-web-frontend",
   "version": "0.1.0",
   "private": true,
   "author": {
@@ -105,5 +105,9 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
+  },
+  "engines": {
+    "node": ">=10.18.1",
+    "yarn": ">=1.21.1"
   }
 }
