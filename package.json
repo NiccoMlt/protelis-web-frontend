@@ -80,6 +80,8 @@
   },
   "scripts": {
     "commit": "git-cz",
+    "deploy": "now",
+    "deploy:prod": "now --prod",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./",
