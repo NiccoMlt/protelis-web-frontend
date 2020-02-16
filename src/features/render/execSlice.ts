@@ -6,7 +6,7 @@ export interface NodePosition {
   y: number;
 }
 
-export type EventBusStatus = 'open' | 'closed';
+export type EventBusStatus = 'open' | 'pending' | 'closed';
 type AlchemistStatus = 'INIT' | 'READY' | 'PAUSED' | 'RUNNING' | 'TERMINATED';
 export type ExecutionStatus = 'disconnected' | 'connecting' | AlchemistStatus;
 
