@@ -94,7 +94,7 @@
     "storybook-addon-material-ui": "^0.9.0-alpha.21",
     "typescript": "3.7.5",
     "vue": "^2.6.10",
-    "webpack": "^4.41.6"
+    "webpack": "4.41.5"
   },
   "scripts": {
     "commit": "git-cz",
