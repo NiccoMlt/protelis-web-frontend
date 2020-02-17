@@ -42,7 +42,7 @@
     "@testing-library/dom": "6.12.2",
     "@testing-library/jest-dom": "5.1.1",
     "@testing-library/react": "9.4.0",
-    "@testing-library/user-event": "8.1.0",
+    "@testing-library/user-event": "8.1.1",
     "@types/enzyme": "3.10.5",
     "@types/jest": "25.1.2",
     "@types/node": "13.7.1",
