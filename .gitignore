@@ -170,6 +170,7 @@ dist/
 .out
 .storybook-out
 storybook-static
+out*/
 
 # vuepress build output
 .vuepress/dist

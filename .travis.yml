@@ -16,3 +16,10 @@ script:
 
 after_script:
   - yarn codecov:upload
+
+deploy:
+  provider: script
+  edge: true
+  script: yarn deploy-storybook --ci
+  on:
+    branch: master

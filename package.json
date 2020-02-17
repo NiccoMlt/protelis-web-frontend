@@ -48,6 +48,7 @@
     "@storybook/core": "^5.3.13",
     "@storybook/preset-create-react-app": "^1.5.2",
     "@storybook/react": "^5.3.13",
+    "@storybook/storybook-deployer": "^2.8.1",
     "@testing-library/dom": "6.12.2",
     "@testing-library/jest-dom": "5.1.1",
     "@testing-library/react": "9.4.0",
@@ -99,6 +100,7 @@
     "commit": "git-cz",
     "deploy": "now",
     "deploy:prod": "now --prod",
+    "deploy-storybook": "storybook-to-ghpages",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./",
@@ -131,5 +133,10 @@
   "engines": {
     "node": ">=10.18.1",
     "yarn": ">=1.17.0"
+  },
+  "storybook-deployer": {
+    "gitUsername": "Niccolò Maltoni - GH Pages Bot",
+    "gitEmail": "niccolo.maltoni@studio.unibo.it",
+    "commitMessage": "Deploy Storybook [skip ci]"
   }
 }
