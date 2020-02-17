@@ -48,6 +48,19 @@ module.exports = {
       {
         allow: ["warn", "error"]
       }
+    ],
+    'import/no-extraneous-dependencies': [
+      "error",
+      {
+        devDependencies: [
+          '.storybook/**',
+          'stories/**',
+          'src/stories/**',
+          'src/**/*.stories.*',
+          'src/__test__/**',
+          'src/**/*.test.*'
+        ]
+      }
     ]
   }
 };
