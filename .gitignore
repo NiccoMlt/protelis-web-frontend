@@ -79,7 +79,6 @@ Temporary Items
 ### Node ###
 # Logs
 logs
-*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -170,6 +169,7 @@ dist/
 # Storybook build outputs
 .out
 .storybook-out
+storybook-static
 
 # vuepress build output
 .vuepress/dist
@@ -204,7 +204,6 @@ temp/
 **/*.back.*
 
 node_modules
-bower_components
 
 *.sublime*
 
