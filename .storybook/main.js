@@ -17,7 +17,8 @@ module.exports = {
         configureJSX: true
       }
     },
+    'storybook-addon-material-ui/register',
     '@storybook/addon-actions',
-    '@storybook/addon-links',
+    '@storybook/addon-links'
   ],
 };
