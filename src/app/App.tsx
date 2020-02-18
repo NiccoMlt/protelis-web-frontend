@@ -1,22 +1,29 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import {
-  Grid, Paper, CssBaseline, createMuiTheme, useMediaQuery,
+  Grid,
+  CssBaseline,
+  createMuiTheme,
+  useMediaQuery,
 } from '@material-ui/core';
 import {
-  ThemeProvider, Theme, makeStyles, createStyles,
+  ThemeProvider,
+  Theme,
+  makeStyles,
+  createStyles,
 } from '@material-ui/core/styles';
-
 import ProtelisAppBar from '../components/ProtelisAppBar';
-import EditorContainer from '../features/editor/EditorContainer';
+import EditorCard from '../features/editor/EditorCard';
 import { protelisTheme } from '../styles/theme';
-import RenderCanvas from '../features/render/RenderCanvas';
+import RenderCard from '../features/render/RenderCard';
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
   root: {
     padding: theme.spacing(1, 1),
-    flexGrow: 1,
-    height: '100%',
+    margin: theme.spacing(0),
+    flexGrow: 0,
+    maxWidth: '100%',
+    maxHeight: '100%',
   },
 }));
 
@@ -44,12 +51,10 @@ const App: React.FC = () => {
         <Router>
           <Grid container spacing={2} className={classes.root}>
             <Grid item xs>
-              <EditorContainer />
+              <EditorCard />
             </Grid>
             <Grid item xs>
-              <Paper>
-                <RenderCanvas />
-              </Paper>
+              <RenderCard />
             </Grid>
           </Grid>
         </Router>

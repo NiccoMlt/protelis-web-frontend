@@ -4,10 +4,10 @@ import { Theme, createStyles } from '@material-ui/core';
 import { fade } from '@material-ui/core/styles';
 import TreeItem, { TreeItemProps } from '@material-ui/lab/TreeItem';
 import { useDispatch, useSelector } from 'react-redux';
-import { openFile } from './editorSlice';
-import { RootState } from '../../app/rootReducer';
-import { ProtelisFile, isSourceFile } from '../../model/File';
-import { getFileAtPath } from '../../utils/fileUtils';
+import { openFile } from '../editorSlice';
+import { RootState } from '../../../app/rootReducer';
+import { ProtelisFile, isSourceFile } from '../../../model/File';
+import { getFileAtPath } from '../../../utils/fileUtils';
 
 /** The FileTreeItem view component gets contained file path from props. */
 type FileTreeItemProps = TreeItemProps & {
