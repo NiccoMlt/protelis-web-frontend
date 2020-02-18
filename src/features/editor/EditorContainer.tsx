@@ -7,8 +7,7 @@ import { CloudUpload, LibraryAddRounded } from '@material-ui/icons';
 import { useSelector } from 'react-redux';
 import { ProtelisFile } from '../../model/File';
 import { RootState } from '../../app/rootReducer';
-import FileTreeView from './FileTreeView';
-import { PtMonacoEditor } from '../../components/PtMonacoEditor';
+import FileTreeView from './files/FileTreeView';
 import { AddDialogButton } from '../../components/AddDialogButton';
 import { getFileAtPath } from '../../utils/fileUtils';
 
@@ -26,7 +25,10 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
   },
 }));
 
-/** Container component that wraps TreeView and Editor. */
+/**
+ * Container component that wraps TreeView and Editor.
+ * @deprecated use EditorCard instead
+ */
 const EditorContainer: React.FC = () => {
   const classes = useStyles();
 
@@ -66,7 +68,7 @@ const EditorContainer: React.FC = () => {
           </div>
         </Grid>
         <Grid item xs>
-          <PtMonacoEditor />
+          {/* <PtMonacoEditor /> */}
         </Grid>
       </Grid>
     </Paper>

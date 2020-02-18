@@ -3,8 +3,8 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import ConnectionStatus from './ConnectionStatus';
 import Logo from '../styles/logo.png';
+import ConnectionStatus from './ConnectionStatus';
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
   root: {
@@ -25,10 +25,10 @@ const ProtelisAppBar: React.FC = () => {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="relative">
         <Toolbar>
           <img src={Logo} alt="logo" className={classes.logo} />
-          <Typography variant="h6" className={classes.title}>
+          <Typography variant="h6" className={classes.title} noWrap>
             Protelis on the Web
           </Typography>
           <ConnectionStatus />

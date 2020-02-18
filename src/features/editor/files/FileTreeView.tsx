@@ -5,7 +5,7 @@ import {
   FolderOpenRounded,
   FolderRounded,
 } from '@material-ui/icons';
-import { ProtelisFile } from '../../model/File';
+import { ProtelisFile } from '../../../model/File';
 import { FileTreeItem } from './FileTreeItem';
 
 /** The FileTree view component gets contained files from props. */
