@@ -44,7 +44,8 @@ const EditorCard: React.FC = () => {
       : null
     ),
   );
-  const canSend: boolean = (open?.content?.trim()?.length ?? 0) > 0;
+  const connected: boolean = useSelector<RootState, boolean>((state) => state.exec.connection === 'open');
+  const canSend: boolean = connected && (open?.content?.trim()?.length ?? 0) > 0;
 
   const dispatch: Dispatch = useDispatch();
 

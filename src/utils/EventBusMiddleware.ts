@@ -24,6 +24,7 @@ import {
   drawStep,
   drawEnd,
   setId,
+  ebConnecting,
 } from '../features/render/execSlice';
 
 /** Object that wraps arguments of send method of EventBus. */
@@ -70,14 +71,16 @@ function eventBusMiddleware(): Middleware<{}, RootState> {
   return (api: MiddlewareAPI<Dispatch, RootState>) => (next: Dispatch<EbAction>) => (action: EbAction) => {
     switch (action.type) {
       case ebConnect.type:
-        if (!eventBus) {
-          const { host, options } = action.payload;
-          eventBus = new EventBus(host, options);
-          eventBus.enableReconnect(false);
-          eventBus.onopen = onOpen(api.dispatch);
-          eventBus.onclose = onClose(api.dispatch);
-          eventBus.onerror = onError(api.dispatch);
+        if (eventBus) {
+          console.warn('EventBus was already open, closing...');
+          eventBus.close();
         }
+        api.dispatch(ebConnecting());
+        eventBus = new EventBus(action.payload.host, action.payload.options);
+        eventBus.enableReconnect(false);
+        eventBus.onopen = onOpen(api.dispatch);
+        eventBus.onclose = onClose(api.dispatch);
+        eventBus.onerror = onError(api.dispatch);
         break;
       case ebDisconnect.type:
         if (eventBus) {
@@ -94,12 +97,13 @@ function eventBusMiddleware(): Middleware<{}, RootState> {
         }
         break;
       case ebUpload.type: {
-        if (!eventBus) {
-          api.dispatch(ebConnect({ host: '/eventbus/' }));
+        if (eventBus) {
+          const { files } = api.getState().editor;
+          const source: string = files.filter(isSourceFile)[0].content; // fixme: merge all source files
+          api.dispatch(ebSend({ address: 'protelis.web.exec.setup', message: source, headers: {} }));
+        } else {
+          throw new Error('EventBus is closed');
         }
-        const { files } = api.getState().editor;
-        const source: string = files.filter(isSourceFile)[0].content; // fixme: merge all source files
-        api.dispatch(ebSend({ address: 'protelis.web.exec.setup', message: source, headers: {} }));
         break;
       }
       case ebSend.type:
