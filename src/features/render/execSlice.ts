@@ -35,6 +35,9 @@ const execSlice = createSlice({
     ebConnected(state) {
       state.connection = 'open';
     },
+    ebConnecting(state) {
+      state.connection = 'pending';
+    },
     ebDisconnected(state) {
       state.connection = 'closed';
     },
@@ -73,6 +76,7 @@ export const {
   drawInit,
   drawStep,
   ebConnected,
+  ebConnecting,
   ebDisconnected,
   setId,
 } = execSlice.actions;
