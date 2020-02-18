@@ -138,6 +138,17 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
+# Yarn: https://next.yarnpkg.com/advanced/qa#which-files-should-be-gitignored
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+## If you're using Zero-Installs:
+.yarn/unplugged
+.yarn/build-state.yml
+## Also, if you're *not* using Zero-Installs:
+.yarn/cache
+.pnp.*
+
 # Yarn Integrity file
 .yarn-integrity
 
