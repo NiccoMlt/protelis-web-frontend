@@ -87,7 +87,10 @@ const RenderCard: React.FC = () => {
           {({ store }) => (
             <Stage width={stageWidth} height={stageHeight}>
               <Provider store={store}>
-                <NodeCircles isVisible={(x, y) => x <= stageWidth && y <= stageHeight} />
+                <NodeCircles
+                  isVisible={(x, y) => x <= stageWidth && y <= stageHeight}
+                  transform={(x, y) => ({ x: x + (stageWidth / 2), y: y + stageHeight })}
+                />
               </Provider>
             </Stage>
           )}

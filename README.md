@@ -1,11 +1,11 @@
 # Protelis on the Web - React frontend
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4565238b5b4c45bf944963e97a43358d)](https://app.codacy.com/manual/NiccoMlt/protelis-web-frontend?utm_source=github.com&utm_medium=referral&utm_content=NiccoMlt/protelis-web-frontend&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.com/NiccoMlt/Protelis-Web-Frontend.svg?token=gFNEyVkpY7xNqwmKzp7q&branch=master)](https://travis-ci.com/NiccoMlt/Protelis-Web-Frontend)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4565238b5b4c45bf944963e97a43358d)](https://app.codacy.com/manual/NiccoMlt/protelis-web-frontend?utm_source=github.com&utm_medium=referral&utm_content=NiccoMlt/protelis-web-frontend&utm_campaign=Badge_Grade_Dashboard)
 [![codecov](https://codecov.io/gh/NiccoMlt/Protelis-Web-frontend/branch/master/graph/badge.svg)](https://codecov.io/gh/NiccoMlt/Protelis-Web-frontend)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-Web frontend for [Protelis Web backend](https://github.com/NiccoMlt/Protelis-Web), deployed by default at https://protelis-web-frontend.now.sh.
+Web frontend for [Protelis Web backend](https://github.com/NiccoMlt/Protelis-Web), deployed by default at <https://protelis-web-frontend.now.sh>.
 
 ## Project details
 
@@ -43,8 +43,8 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 If you are a die-hard Gradle lover, this project was also wrapped with Gradle.
 You can run:
 
-- `gradle reactBuild` to execute `yarn build`
-- `gradle jest` to execute `yarn test` with CI configuration
+  - `gradle reactBuild` to execute `yarn build`
+  - `gradle jest` to execute `yarn test` with CI configuration
 
 ## Code quality & CI
 
