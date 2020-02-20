@@ -157,7 +157,7 @@ typings/
 .nuxt
 
 # react / gatsby
-public/
+# public/
 
 # rollup.js default build output
 dist/

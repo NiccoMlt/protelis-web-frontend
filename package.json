@@ -85,7 +85,7 @@
     "deploy:prod": "now --prod",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx ./",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "test": "react-scripts test --env=jsdom",
     "test:ci": "yarn test --runInBand --bail --ci --coverage --reporters=default --reporters=jest-junit",
     "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
