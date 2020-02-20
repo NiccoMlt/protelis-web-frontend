@@ -34,7 +34,7 @@
     "redux": "4.0.5",
     "redux-logger": "3.0.6",
     "sockjs-client": "1.4.0",
-    "tslib": "1.10.0",
+    "tslib": "1.11.0",
     "typeface-roboto": "0.0.75",
     "vertx3-eventbus-client": "3.8.5"
   },
