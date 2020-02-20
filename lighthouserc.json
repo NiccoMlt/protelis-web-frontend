@@ -1,0 +1,37 @@
+{
+  "ci": {
+    "collect": {
+      "numberOfRuns": 3,
+      "staticDistDir": "./build"
+    },
+    "assert": {
+      "preset": "lighthouse:no-pwa",
+      "assertions": {
+        "dom-size": ["error", {"maxNumericValue": 3000}],
+        "offscreen-images": "off",
+        "color-contrast": "off",
+        "tap-targets": "off",
+        "uses-webp-images": "off",
+        "first-contentful-paint": [
+          "warn",
+          {
+            "maxNumericValue": 2500,
+            "aggregationMethod": "optimistic"
+          }
+        ],
+        "interactive": [
+          "warn",
+          {
+            "maxNumericValue": 5000,
+            "aggregationMethod": "optimistic"
+          }
+        ],
+        "uses-long-cache-ttl": "off",
+        "uses-http2": "off"
+      }
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    }
+  }
+}

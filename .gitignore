@@ -157,7 +157,7 @@ typings/
 .nuxt
 
 # react / gatsby
-public/
+# public/
 
 # rollup.js default build output
 dist/
@@ -186,6 +186,9 @@ dist/
 # Temporary folders
 tmp/
 temp/
+
+# Lighthouse CI
+.lighthouseci
 
 ### OSX ###
 # General

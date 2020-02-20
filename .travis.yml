@@ -6,6 +6,9 @@ dist: bionic
 language: node_js
 node_js: lts/*
 
+addons:
+  chrome: stable
+
 cache:
   yarn: true
 
@@ -13,6 +16,7 @@ script:
   - yarn lint
   - yarn build
   - yarn test:ci
+  - yarn lighthouse
 
 after_script:
   - yarn codecov:upload

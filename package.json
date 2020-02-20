@@ -39,6 +39,7 @@
     "vertx3-eventbus-client": "3.8.5"
   },
   "devDependencies": {
+    "@lhci/cli": "^0.3.8",
     "@testing-library/dom": "6.12.2",
     "@testing-library/jest-dom": "5.1.1",
     "@testing-library/react": "9.4.0",
@@ -84,10 +85,11 @@
     "deploy:prod": "now --prod",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx ./",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "test": "react-scripts test --env=jsdom",
     "test:ci": "yarn test --runInBand --bail --ci --coverage --reporters=default --reporters=jest-junit",
     "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
+    "lighthouse": "lhci autorun",
     "codecov:upload": "yarn test:ci && codecov",
     "eject": "react-scripts eject"
   },
