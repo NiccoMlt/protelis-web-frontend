@@ -1204,20 +1204,20 @@
     prop-types "^15.7.2"
     react-is "^16.8.0"
 
-"@microsoft/tsdoc-config@0.13.0":
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/@microsoft/tsdoc-config/-/tsdoc-config-0.13.0.tgz#48a9166d1db7b0dbac15def9de4fecef25bf40ac"
-  integrity sha512-ga2nChnT2K4y9zqQ0/8xf3TgFz+zbgxLXVRsIsbBhgx2gi0Ez4VQ2CKjElu5kF0uzLz6fLemkkVzUyi/ptekvw==
+"@microsoft/tsdoc-config@0.13.1":
+  version "0.13.1"
+  resolved "https://registry.yarnpkg.com/@microsoft/tsdoc-config/-/tsdoc-config-0.13.1.tgz#63c0d003515e2403890b8f12e72d40ae526176b3"
+  integrity sha512-YwBW9uA3VNUaQeJk2FTKvp4Q5hGdv9UuSQCRU+TQuXSwk+DLLWTaJ8wNxLv1dkdkIjFylkmobF/+WTiCXd9sew==
   dependencies:
-    "@microsoft/tsdoc" "0.12.16"
+    "@microsoft/tsdoc" "0.12.17"
     ajv "~6.10.2"
     jju "~1.4.0"
     resolve "~1.12.0"
 
-"@microsoft/tsdoc@0.12.16":
-  version "0.12.16"
-  resolved "https://registry.yarnpkg.com/@microsoft/tsdoc/-/tsdoc-0.12.16.tgz#13869988581fddbdfdbcb92e26edc955fc6e00ca"
-  integrity sha512-SX8JNEVy6U5+56aQnQB8A2XK+WSF//b0kBa6KqxE48pcccqVuIu1ePAR/EWd1cQB6zWv26QIY5uv/++qm+Z3Mw==
+"@microsoft/tsdoc@0.12.17":
+  version "0.12.17"
+  resolved "https://registry.yarnpkg.com/@microsoft/tsdoc/-/tsdoc-0.12.17.tgz#ad4ac6a2691f24e6af5244b652b58d1bedbcf7b1"
+  integrity sha512-Q64HcG/+L9cyZ2NiLhZ2e1TavXP+We35cdOuKGi8AKjPHd1gBnSOp7uAaO5mbBWwPx1e82kyvhRfbV/OsDgA3g==
 
 "@monaco-editor/react@3.1.0":
   version "3.1.0"
@@ -4518,13 +4518,13 @@ eslint-plugin-react@7.18.3:
     resolve "^1.14.2"
     string.prototype.matchall "^4.0.2"
 
-eslint-plugin-tsdoc@0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-tsdoc/-/eslint-plugin-tsdoc-0.2.1.tgz#a983f9ed840a86417fb2a10341df0c6e5662a0fe"
-  integrity sha512-PPobACY4MUmk1r7oQZwQ53GcUvkmlGhkEoBc+JWRcHHXrJ7Ny4OGWUoha9lzLJCyKOP5C8AYjVAr2rxahsXWZg==
+eslint-plugin-tsdoc@0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-tsdoc/-/eslint-plugin-tsdoc-0.2.2.tgz#494fa4df89be254c670084c4f0e1247c577e5146"
+  integrity sha512-koo8p3eN3NWWd/HsYIs1fzvaGck7pmFjJghDG+Xz7jVajiR+/WYvcHfvCg0/lbZsqgGBFHNHRSliW6tkv8wbGQ==
   dependencies:
-    "@microsoft/tsdoc" "0.12.16"
-    "@microsoft/tsdoc-config" "0.13.0"
+    "@microsoft/tsdoc" "0.12.17"
+    "@microsoft/tsdoc-config" "0.13.1"
 
 eslint-scope@^4.0.3:
   version "4.0.3"
