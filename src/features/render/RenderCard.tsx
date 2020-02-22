@@ -1,41 +1,38 @@
 import React from 'react';
 import {
-  Box,
-  Card,
-  CardContent,
-  CardHeader,
-  Typography,
+  Box, Card, CardContent, CardHeader, Typography,
 } from '@material-ui/core';
 import {
-  Circle,
-  Layer,
-  Stage,
-  Text,
+  Circle, Layer, Stage, Text,
 } from 'react-konva';
 import { Provider, ReactReduxContext, useSelector } from 'react-redux';
 import { RootState } from '../../app/rootReducer';
-import { ExecState, NodePosition } from './execSlice';
+import { ExecState } from './execSlice';
+import { NodePosition, RenderPayload } from '../../utils/eventBusUtils';
+
+type MapCoordinates = (x: number, y: number) => { x: number; y: number };
 
 interface NodeCirclesProps {
-  /**
-   * Checks if a node is visible or not.
-   * @param x - the x coordinate
-   * @param y - the y coordinate
-   * @returns true if visible
-   */
-  isVisible: (x: number, y: number) => boolean;
-  /**
-   * Optional transformation function that maps the coordinates of nodes.
-   * @param x - the x coordinate
-   * @param y - the y coordinate
-   * @returns the new coordinates
-   */
-  transform?: (x: number, y: number) => { x: number; y: number };
+  stageWidth: number;
+  stageHeight: number;
 }
 
 /** Component that draws a Konva Circle for each node in Redux Store. */
-const NodeCircles: React.FC<NodeCirclesProps> = ({ isVisible, transform }) => {
-  const nodes = useSelector<RootState, NodePosition[] | null>((state) => state.exec.execution.drawing);
+const NodeCircles: React.FC<NodeCirclesProps> = ({ stageWidth, stageHeight }) => {
+  const nodes: NodePosition[] | null = useSelector((state: RootState) => state.exec.execution.drawing?.nodes ?? null);
+  const env: RenderPayload['env'] | null = useSelector((state: RootState) => state.exec.execution.drawing?.env ?? null);
+  const width = env?.width ?? 1;
+  const height = env?.height ?? 1;
+
+  const isVisible = (x: number, y: number): boolean => x <= stageWidth && y <= stageHeight;
+
+  const rescale: MapCoordinates = (x, y) => ({ x: (x * stageWidth) / width, y: (y * stageHeight) / height });
+  const fromCenterToTopLeft: MapCoordinates = (x, y) => ({ x: x + (stageWidth / 2), y: y + (stageHeight / 2) });
+
+  const transform: MapCoordinates = (x, y) => {
+    const { x: rx, y: ry } = rescale(x, y);
+    return fromCenterToTopLeft(rx, ry);
+  };
 
   return (
     <Layer>
@@ -88,8 +85,8 @@ const RenderCard: React.FC = () => {
             <Stage width={stageWidth} height={stageHeight}>
               <Provider store={store}>
                 <NodeCircles
-                  isVisible={(x, y) => x <= stageWidth && y <= stageHeight}
-                  transform={(x, y) => ({ x: x + (stageWidth / 2), y: y + stageHeight })}
+                  stageWidth={stageWidth}
+                  stageHeight={stageHeight}
                 />
               </Provider>
             </Stage>

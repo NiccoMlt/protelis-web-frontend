@@ -1,6 +1,5 @@
 import { Options as SockJsOptions } from 'sockjs-client';
 import { EventBus as IEventBus } from 'vertx3-eventbus-client';
-import { NodePosition } from '../features/render/execSlice';
 
 /** Possible options for Vert.x EventBus bridge connection. */
 interface VertxBusOptions {
@@ -40,13 +39,15 @@ export interface EventBusMsgHandler<T> extends EventBusHandler {
   callback: ((error: Error, message: EventBusMessage<T>) => void);
 }
 
+interface Pair<T> {
+  first: T;
+  second: T;
+}
+
 /** A Protelis Node info object encapsulates all the infos about a Node in the Protelis environment. */
 interface ProtelisNode {
   id: string;
-  coordinates: {
-    first: number;
-    second: number;
-  };
+  coordinates: Pair<number>;
 }
 
 /**
@@ -55,6 +56,7 @@ interface ProtelisNode {
  */
 export interface ProtelisUpdateMessage {
   nodes: ProtelisNode[];
+  envSize: Pair<number>;
 }
 
 export function eventBusMsgHandleBuilder<T>(handler: (payload: T) => void): EventBusMsgHandler<T>['callback'] {
@@ -67,17 +69,35 @@ export function eventBusMsgHandleBuilder<T>(handler: (payload: T) => void): Even
   };
 }
 
+export interface NodePosition {
+  id: string;
+  x: number;
+  y: number;
+}
+
+export interface RenderPayload {
+  env: {
+    width: number;
+    height: number;
+  };
+  nodes: NodePosition[];
+}
+
 /**
  * Transform a JSON-serialized Kotlin ProtelisUpdateMessage data object into an array of NodePositions.
  * @param msg - the object received from EventBus
  * @returns the useful data
  */
-export function mapUpdate(msg: ProtelisUpdateMessage): NodePosition[] {
-  return msg
-    .nodes
-    .map(({ id, coordinates: { first, second } }) => ({
-      id,
-      x: first,
-      y: second,
-    }));
+export function mapUpdate(msg: ProtelisUpdateMessage): RenderPayload {
+  const { first: width, second: height } = msg.envSize;
+  return {
+    env: { width, height },
+    nodes: msg
+      .nodes
+      .map(({ id, coordinates: { first, second } }) => ({
+        id,
+        x: first,
+        y: second,
+      })),
+  };
 }
