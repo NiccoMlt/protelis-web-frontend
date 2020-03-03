@@ -15,5 +15,5 @@ script:
   - yarn test:coverage
 
 after_script:
-  - yarn codecov:upload
+  - yarn codecov
   - bash <(curl -Ls https://coverage.codacy.com/get.sh)
