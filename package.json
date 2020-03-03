@@ -91,6 +91,19 @@
     "codecov:upload": "yarn test:ci && codecov",
     "eject": "react-scripts eject"
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!**/node_modules/**",
+      "!**/coverage/**",
+      "!**/serviceWorker.{js,ts}",
+      "!**/index.{js,jsx,ts,tsx}"
+    ],
+    "coverageReporters": [
+      "text",
+      "jest-junit"
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
