@@ -92,6 +92,16 @@
     "deploy:prod": "now --prod",
     "eject": "react-scripts eject"
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.{js,jsx,ts,tsx}",
+      "!**/node_modules/**",
+      "!**/coverage/**",
+      "!**/react-app-env.d.ts",
+      "!**/serviceWorker.{js,ts}",
+      "!**/index.{js,jsx,ts,tsx}"
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",

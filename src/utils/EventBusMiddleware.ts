@@ -9,13 +9,8 @@ import { createAction } from '@reduxjs/toolkit';
 import { RootState } from '../app/rootReducer';
 import { isSourceFile } from '../model/File';
 import {
-  EventBusHandler,
-  EventBusMessage,
   eventBusMsgHandleBuilder,
-  EventBusMsgHandler,
-  EventBusOptions,
   mapUpdate,
-  ProtelisUpdateMessage,
 } from './eventBusUtils';
 import {
   ebConnected,
@@ -26,6 +21,13 @@ import {
   setId,
   ebConnecting,
 } from '../features/render/execSlice';
+import {
+  EventBusHandler,
+  EventBusMessage,
+  EventBusMsgHandler,
+  EventBusOptions,
+  ProtelisUpdateMessage,
+} from '../model/EventBus';
 
 /** Object that wraps arguments of send method of EventBus. */
 interface EventBusPayload {

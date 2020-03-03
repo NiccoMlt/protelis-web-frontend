@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { RenderPayload } from '../../utils/eventBusUtils';
+import { RenderPayload } from '../../model/EventBus';
 
 export type EventBusStatus = 'open' | 'pending' | 'closed';
 type AlchemistStatus = 'INIT' | 'READY' | 'PAUSED' | 'RUNNING' | 'TERMINATED';
