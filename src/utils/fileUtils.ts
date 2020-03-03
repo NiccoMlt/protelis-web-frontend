@@ -12,7 +12,10 @@ import {
  * In result array, top folder is first element and the file is last.
  *
  * @param filePath - the path to validate and split
+ *
  * @returns the folders, if valid
+ *
+ * @throws Error if invalid file path is specified
  */
 function resolveFoldersFromPath(filePath: string): string[] | never {
   const folders = filePath.split('/')
@@ -30,6 +33,8 @@ function resolveFoldersFromPath(filePath: string): string[] | never {
  * @param filePath - the full path of the file to remove
  *
  * @returns the new root Set without the file to be removed
+ *
+ * @throws Error if invalid file path is specified
  */
 export function removeFileAtPath(fileSet: ProtelisFile[], filePath: string): ProtelisFile[] {
   const folders: string[] = resolveFoldersFromPath(filePath);
@@ -63,6 +68,8 @@ export function removeFileAtPath(fileSet: ProtelisFile[], filePath: string): Pro
  * @param newName - the new name
  *
  * @returns the new root Set with the desired file renamed
+ *
+ * @throws Error if invalid file path is specified
  */
 export function renameFileAtPath(
   fileSet: ProtelisFile[],

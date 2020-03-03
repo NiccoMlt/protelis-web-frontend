@@ -6,6 +6,7 @@ import {
   ProtelisSourceFile,
 } from '../model/File';
 import {
+  editFileAtPath,
   getFileAtPath,
   getFolderAtPath,
   getSourceFileAtPath, removeFileAtPath,
@@ -182,6 +183,16 @@ describe('File utils', () => {
     expect(result).toEqual(dummyFolder);
   });
 
+  it('can edit a file', () => {
+    const folderSet: ProtelisFile[] = [];
+    folderSet.push(dummyFile);
+    folderSet.push(dummyFolder);
+
+    const content = getFileAtPath(editFileAtPath(folderSet, dummyFile.name, 'pippo'), dummyFile.name);
+    expect(content?.content !== dummyFile.content);
+    expect(content?.content === 'pippo');
+  });
+
   it('fails in case of invalid name', () => {
     const folderSet: ProtelisFile[] = [];
     folderSet.push(dummyFile);
@@ -192,7 +203,17 @@ describe('File utils', () => {
     set.push(dummyFile);
     set.push(folder);
     const notExistent = `/${dummyFile.name}/${dummyFile.name}`;
+
+    expect(() => getFileAtPath(set, notExistent)).not.toThrow();
+    expect(getFileAtPath(set, notExistent)).toBeUndefined();
+    expect(() => getSourceFileAtPath(set, notExistent)).toThrow();
+    expect(() => getFolderAtPath(set, notExistent)).toThrow();
+
     expect(() => removeFileAtPath(set, notExistent)).toThrow();
     expect(() => renameFileAtPath(set, notExistent, newName)).toThrow();
+
+    expect(() => getFileAtPath(set, '')).toThrow();
+    expect(() => removeFileAtPath(set, '')).toThrow();
+    expect(() => renameFileAtPath(set, '', newName)).toThrow();
   });
 });

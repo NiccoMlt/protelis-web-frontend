@@ -8,7 +8,7 @@ import {
 import { Provider, ReactReduxContext, useSelector } from 'react-redux';
 import { RootState } from '../../app/rootReducer';
 import { ExecState } from './execSlice';
-import { NodePosition, RenderPayload } from '../../utils/eventBusUtils';
+import { NodePosition, RenderPayload } from '../../model/EventBus';
 
 type MapCoordinates = (x: number, y: number) => { x: number; y: number };
 
