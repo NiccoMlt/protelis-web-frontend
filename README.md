@@ -1,5 +1,6 @@
 # Protelis on the Web - React frontend
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/806a27e91b524c9ba7a10f32ff8c72f5)](https://app.codacy.com/manual/NiccoMlt/protelis-web-frontend?utm_source=github.com&utm_medium=referral&utm_content=NiccoMlt/protelis-web-frontend&utm_campaign=Badge_Grade_Settings)
 [![Build Status](https://travis-ci.com/NiccoMlt/Protelis-Web-Frontend.svg?token=gFNEyVkpY7xNqwmKzp7q&branch=master)](https://travis-ci.com/NiccoMlt/Protelis-Web-Frontend)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4565238b5b4c45bf944963e97a43358d)](https://app.codacy.com/manual/NiccoMlt/protelis-web-frontend?utm_source=github.com&utm_medium=referral&utm_content=NiccoMlt/protelis-web-frontend&utm_campaign=Badge_Grade_Dashboard)
 [![codecov](https://codecov.io/gh/NiccoMlt/Protelis-Web-frontend/branch/master/graph/badge.svg)](https://codecov.io/gh/NiccoMlt/Protelis-Web-frontend)
