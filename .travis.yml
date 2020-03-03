@@ -12,7 +12,8 @@ cache:
 script:
   - yarn lint
   - yarn build
-  - yarn test:ci
+  - yarn test:coverage
 
 after_script:
   - yarn codecov:upload
+  - bash <(curl -Ls https://coverage.codacy.com/get.sh)
