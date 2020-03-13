@@ -39,7 +39,7 @@
     "vertx3-eventbus-client": "3.8.5"
   },
   "devDependencies": {
-    "@testing-library/dom": "6.16.0",
+    "@testing-library/dom": "7.0.2",
     "@testing-library/jest-dom": "5.1.1",
     "@testing-library/react": "9.5.0",
     "@testing-library/user-event": "10.0.0",
