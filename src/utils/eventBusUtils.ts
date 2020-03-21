@@ -26,10 +26,11 @@ export function mapUpdate(msg: ProtelisUpdateMessage): RenderPayload {
     env: { width, height },
     nodes: msg
       .nodes
-      .map(({ id, coordinates: { first, second } }) => ({
+      .map(({ id, coordinates: { first, second }, value }) => ({
         id,
         x: first,
         y: second,
+        value,
       })),
   };
 }

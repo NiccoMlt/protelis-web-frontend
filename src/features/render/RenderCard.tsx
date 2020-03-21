@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Box, Card, CardContent, CardHeader, Typography,
+  Box, Card, CardActions, CardContent, CardHeader, Typography,
 } from '@material-ui/core';
 import {
   Circle, Layer, Stage, Text,
@@ -15,6 +15,24 @@ type MapCoordinates = (x: number, y: number) => { x: number; y: number };
 interface NodeCirclesProps {
   stageWidth: number;
   stageHeight: number;
+}
+
+function stringToColour(str: string): string {
+  let i;
+  let hash = 0;
+  // eslint-disable-next-line no-plusplus
+  for (i = 0; i < str.length; i++) {
+    // eslint-disable-next-line no-bitwise
+    hash = str.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  let colour = '#';
+  // eslint-disable-next-line no-plusplus
+  for (i = 0; i < 3; i++) {
+    // eslint-disable-next-line no-bitwise
+    const value = (hash >> (i * 8)) & 0xFF;
+    colour += (`00${value.toString(16)}`).substr(-2);
+  }
+  return colour;
 }
 
 /** Component that draws a Konva Circle for each node in Redux Store. */
@@ -38,10 +56,21 @@ const NodeCircles: React.FC<NodeCirclesProps> = ({ stageWidth, stageHeight }) =>
     <Layer>
       {
         nodes
-          ?.map(({ id, x: originalX, y: originalY }, i) => {
+          ?.map(({
+            id, x: originalX, y: originalY, value,
+          }, i) => {
             const { x, y } = transform?.(originalX, originalY) ?? { x: originalX, y: originalY };
             if (!isVisible(x, y)) console.warn(`Node ${id} (${i}/${nodes?.length}) is not visible`); // fixme
-            return <Circle id={id} key={id} x={x} y={y} radius={5} fill="black" />;
+            return (
+              <Circle
+                id={id}
+                key={id}
+                x={x}
+                y={y}
+                radius={5}
+                fill={value !== '' ? stringToColour(value) : 'black'}
+              />
+            );
           })
         || <Text fill="white" text="NO NODES FOUND" />
       }
@@ -64,6 +93,13 @@ const ExecInfo: React.FC = () => {
       </Typography>
     </>
   );
+};
+
+const NodeValues: React.FC = () => {
+  const nodes: NodePosition[] | null = useSelector((state: RootState) => state.exec.execution.drawing?.nodes ?? null);
+  const dummy: string = (nodes?.map((v) => v.value)?.join('')?.substr(0, 10) ?? '') || 'empty';
+
+  return <h6>{nodes && `Value is: ${dummy}`}</h6>;
 };
 
 const RenderCard: React.FC = () => {
@@ -93,6 +129,9 @@ const RenderCard: React.FC = () => {
           )}
         </ReactReduxContext.Consumer>
       </CardContent>
+      <CardActions>
+        <NodeValues />
+      </CardActions>
     </Card>
   );
 };

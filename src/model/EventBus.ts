@@ -48,6 +48,7 @@ interface Pair<T> {
 interface ProtelisNode {
   id: string;
   coordinates: Pair<number>;
+  value: string;
 }
 
 /**
@@ -63,6 +64,7 @@ export interface NodePosition {
   id: string;
   x: number;
   y: number;
+  value: string;
 }
 
 export interface RenderPayload {
