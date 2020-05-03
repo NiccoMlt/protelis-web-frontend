@@ -1354,10 +1354,10 @@
   resolved "https://registry.yarnpkg.com/@microsoft/tsdoc/-/tsdoc-0.12.19.tgz#2173ccb92469aaf62031fa9499d21b16d07f9b57"
   integrity sha512-IpgPxHrNxZiMNUSXqR1l/gePKPkfAmIKoDRP9hp7OwjU29ZR8WCJsOJ8iBKgw0Qk+pFwR+8Y1cy8ImLY6e9m4A==
 
-"@monaco-editor/react@3.1.2":
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/@monaco-editor/react/-/react-3.1.2.tgz#e2292f5b7905cbcd389d7fb06d886070fac68a23"
-  integrity sha512-V0ymTf5ClGh2zaWOXyrEC9gpF1B9YSZGRMpiobs3FixYdODwLbQS8Yqr9VGY1xc2riPFtXMzz9IPYxLGwmVszg==
+"@monaco-editor/react@3.3.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@monaco-editor/react/-/react-3.3.0.tgz#dbd585a71bf9ef8147d877b4b26ff3de4017bd4a"
+  integrity sha512-qvmUhgawBk2kwNOmXxIkiMGHsLm9vvVoQNY4So/sdrLVIo0DlFBzeal4wkMe1RV0uK47ziVG0LAXm2gV8ioGdA==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
