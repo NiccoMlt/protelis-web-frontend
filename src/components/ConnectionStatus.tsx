@@ -56,7 +56,7 @@ const ConnectionStatus: React.FC = (props: Exclude<ToolbarProps, ['children', 'c
     ...productionBackends,
   ]);
 
-  const [selected, setSelected] = useState(isDev ? backends[0] : referenceBackend);
+  const [selected, setSelected] = useState(isDev() ? backends[0] : referenceBackend);
 
   return (
     <Toolbar {...props}>
