@@ -9983,10 +9983,10 @@ react-is@^16.12.0, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.0, react-i
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-konva@16.13.0-2:
-  version "16.13.0-2"
-  resolved "https://registry.yarnpkg.com/react-konva/-/react-konva-16.13.0-2.tgz#aed8a1d2cd61cb10ab903bfc6e3dffd2a7221a7b"
-  integrity sha512-A88UO1Ll9KW3PunDmlDhdaT3a85J3EVJeEAby0BCMiFcHJ+c+dWZlTXx+uxaUI+Va+UYIMRkPlLJrq5u54AMmg==
+react-konva@16.13.0-3:
+  version "16.13.0-3"
+  resolved "https://registry.yarnpkg.com/react-konva/-/react-konva-16.13.0-3.tgz#9ef1e813c8b2dd61b54b26151ccbdeed52b89a80"
+  integrity sha512-U9az1RidQD4c64oZoHiiv6GU6h2ggHO30nZDqfQWuBTH+Bl2wij6Z0NgbUyVyN1IpKIgXRiEKMS9idlxhAzTXQ==
   dependencies:
     react-reconciler "^0.25.1"
     scheduler "^0.19.1"
