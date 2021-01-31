@@ -1814,10 +1814,10 @@
     "@types/testing-library__dom" "*"
     pretty-format "^25.1.0"
 
-"@types/vertx3-eventbus-client@3.5.0":
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/@types/vertx3-eventbus-client/-/vertx3-eventbus-client-3.5.0.tgz#acccc46748f8c950abc4a7e09ba7624756d0e4f2"
-  integrity sha512-+5cGEjZCpcDdRWu6W4y0ngF4KFSqwKSZixCfCGFs4/ELxTHtoWv5WCpDwXtYM0jKPR58Y6UBX2VkdWbG+uCvbw==
+"@types/vertx3-eventbus-client@3.5.1":
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/@types/vertx3-eventbus-client/-/vertx3-eventbus-client-3.5.1.tgz#459218ec407f97c7743d85cf0a079ee59d3aa3d5"
+  integrity sha512-1LBOAuR1u43swuUNlnQVMST3NnbmfPWqzrkkhn4VlmeYG4iXYAPs6f0ENPAgEs5me10QiHWwgaUGM/HNFMZUlQ==
 
 "@types/webpack-env@1.15.2":
   version "1.15.2"
@@ -11968,10 +11968,10 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-vertx3-eventbus-client@3.8.5:
-  version "3.8.5"
-  resolved "https://registry.yarnpkg.com/vertx3-eventbus-client/-/vertx3-eventbus-client-3.8.5.tgz#9c8b61ac76531e5deff2d4a484df3a9602545a74"
-  integrity sha512-Vq0BUBgX/XPF6soQc2/hb4u4ZnbmsQuvWiACDMFLNtLcKYsE5EVS7hAnDQWWo3/YCAL5mJdnsBHUsT0B7LS+Mw==
+vertx3-eventbus-client@3.9.4:
+  version "3.9.4"
+  resolved "https://registry.yarnpkg.com/vertx3-eventbus-client/-/vertx3-eventbus-client-3.9.4.tgz#a9167f257a4a44ad27d127cd5384d2b93ab23cba"
+  integrity sha512-8cwP8dPWPhxokNqZGZFZFLTSF78Qlly3+CzaWL4RMZg0vPqwwJqJWhNKLSYia6E3k+YWBCoWVhQLLhDd3OgPaw==
   dependencies:
     sockjs-client "^1.1.5"
 
